@@ -18,6 +18,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figurasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -32,6 +34,7 @@
 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
                 this.archivoToolStripMenuItem,
+                this.mantenimientoToolStripMenuItem,
                 this.figurasToolStripMenuItem,
                 this.ayudaToolStripMenuItem
             });
@@ -49,6 +52,14 @@
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+
+            this.mantenimientoToolStripMenuItem.Text = "&Mantenimiento";
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                this.usuariosToolStripMenuItem
+            });
+
+            this.usuariosToolStripMenuItem.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
 
             this.figurasToolStripMenuItem.Text = "&Figuras";
             this.figurasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,6 +116,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem figurasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circuloToolStripMenuItem;
