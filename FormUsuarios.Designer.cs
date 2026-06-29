@@ -26,6 +26,8 @@ namespace FigurasFlow
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -50,6 +52,8 @@ namespace FigurasFlow
             this.gbDatos.Controls.Add(this.lblPassword);
             this.gbDatos.Controls.Add(this.lblNombreUsuario);
             this.gbDatos.Controls.Add(this.lblId);
+            this.gbDatos.Controls.Add(this.txtBuscar);
+            this.gbDatos.Controls.Add(this.lblBuscar);
             this.gbDatos.Location = new System.Drawing.Point(12, 12);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Size = new System.Drawing.Size(560, 150);
@@ -154,6 +158,23 @@ namespace FigurasFlow
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(390, 82);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(150, 20);
+            this.txtBuscar.TabIndex = 11;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Location = new System.Drawing.Point(330, 85);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(43, 13);
+            this.lblBuscar.TabIndex = 10;
+            this.lblBuscar.Text = "Buscar:";
+            // 
             // gbBotones
             // 
             this.gbBotones.Controls.Add(this.btnCancelar);
@@ -167,6 +188,7 @@ namespace FigurasFlow
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Acciones";
+            this.gbBotones.Enter += new System.EventHandler(this.gbBotones_Enter);
             // 
             // btnCancelar
             // 
@@ -176,6 +198,7 @@ namespace FigurasFlow
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -185,6 +208,7 @@ namespace FigurasFlow
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -194,6 +218,7 @@ namespace FigurasFlow
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -206,6 +231,7 @@ namespace FigurasFlow
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Enabled = false;
             this.btnNuevo.Location = new System.Drawing.Point(20, 24);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(90, 25);
@@ -225,6 +251,7 @@ namespace FigurasFlow
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(560, 250);
             this.dgvUsuarios.TabIndex = 2;
+            this.dgvUsuarios.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellEnter);
             // 
             // FormUsuarios
             // 
@@ -239,6 +266,7 @@ namespace FigurasFlow
             this.Name = "FormUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mantenimiento de Usuarios";
+            this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbBotones.ResumeLayout(false);
@@ -258,6 +286,8 @@ namespace FigurasFlow
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.ComboBox cboPerfil;
         private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;

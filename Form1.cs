@@ -26,6 +26,11 @@ namespace FigurasFlow
             AbrirFormularioHijo(new FormUsuarios());
         }
 
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormRegistro());
+        }
+
         private void cuadradoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FormCuadrado());
